@@ -9,8 +9,30 @@
             "modernui": 1
         },
         "classnamespace": "box",
-        "rect": [ 305.0, 220.0, 1000.0, 780.0 ],
+        "rect": [ 305.0, 118.0, 1000.0, 780.0 ],
         "boxes": [
+            {
+                "box": {
+                    "id": "obj-31",
+                    "linecount": 2,
+                    "maxclass": "comment",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [ 116.0, 368.0, 150.0, 33.0 ],
+                    "text": "Make the modulator unipolar"
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-13",
+                    "maxclass": "newobj",
+                    "numinlets": 2,
+                    "numoutlets": 1,
+                    "outlettype": [ "signal" ],
+                    "patching_rect": [ 69.0, 391.0, 40.0, 22.0 ],
+                    "text": "*~ 0.5"
+                }
+            },
             {
                 "box": {
                     "id": "obj-29",
@@ -19,7 +41,6 @@
                     "numinlets": 1,
                     "numoutlets": 0,
                     "patching_rect": [ 31.0, 169.0, 100.0, 74.0 ],
-                    "presentation_linecount": 9,
                     "text": "On/off toggle - [line~] object used to smooth the tranisiton between states",
                     "textjustification": 1
                 }
@@ -32,7 +53,6 @@
                     "numinlets": 1,
                     "numoutlets": 0,
                     "patching_rect": [ 220.5, 182.5, 69.0, 47.0 ],
-                    "presentation_linecount": 3,
                     "text": "'Mix' Control (0-1)",
                     "textjustification": 1
                 }
@@ -54,7 +74,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 31.0, 94.0, 249.0, 60.0 ],
+                    "patching_rect": [ 31.0, 94.0, 250.0, 60.0 ],
                     "text": "By using the [cycle~] object set <20Hz we can use this to drive an LFO to change the amplitude of an osciallor over time creating a 'tremolo' effect"
                 }
             },
@@ -400,6 +420,13 @@
             },
             {
                 "patchline": {
+                    "destination": [ "obj-30", 1 ],
+                    "midpoints": [ 78.5, 425.14453125, 324.5, 425.14453125 ],
+                    "source": [ "obj-13", 0 ]
+                }
+            },
+            {
+                "patchline": {
                     "destination": [ "obj-6", 2 ],
                     "source": [ "obj-14", 0 ]
                 }
@@ -463,8 +490,7 @@
             },
             {
                 "patchline": {
-                    "destination": [ "obj-30", 1 ],
-                    "midpoints": [ 78.5, 414.02734375, 324.5, 414.02734375 ],
+                    "destination": [ "obj-13", 0 ],
                     "source": [ "obj-33", 0 ]
                 }
             },
