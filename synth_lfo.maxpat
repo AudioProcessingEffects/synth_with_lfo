@@ -70,12 +70,12 @@
             {
                 "box": {
                     "id": "obj-19",
-                    "linecount": 4,
+                    "linecount": 5,
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 31.0, 94.0, 250.0, 60.0 ],
-                    "text": "By using the [cycle~] object set <20Hz we can use this to drive an LFO to change the amplitude of an osciallor over time creating a 'tremolo' effect"
+                    "patching_rect": [ 31.0, 77.0, 250.0, 74.0 ],
+                    "text": "By using the [cycle~] object set <20Hz we can use this to drive an LFO to change the amplitude of an osciallor over time creating a 'tremolo' effect. Try using different oscialltors other than [cycle~]."
                 }
             },
             {
